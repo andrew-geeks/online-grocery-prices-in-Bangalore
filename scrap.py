@@ -34,6 +34,6 @@ month = now.strftime("%B") #month
 
 #csv
 data=[[date,month,MRP,actualPrice,amt_discounted_prcntge]]
-with open('potatoprice_dataset.csv','a',newline='') as file:
+with open('datasets/potatoprice_dataset.csv','a',newline='') as file:
             writer=csv.writer(file)
             writer.writerows(data)
