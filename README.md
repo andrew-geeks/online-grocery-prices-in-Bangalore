@@ -1,5 +1,5 @@
 # Online grocery price dataset ~ Bengaluru
-Dataset of vegetables which includes its daily price📈 in the online market(Bangalore). 
+Dataset of grocery(vegetables) which includes its daily price📈,MRP,etc in the online sites(Bangalore). 
 
 Prices🏷️ are taken at daily basis. All datasets are stored in .csv format.
 
