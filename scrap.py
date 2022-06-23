@@ -24,7 +24,6 @@ driver.close()
 amt_discounted= float(MRP) - int(actualPrice)
 amt_discounted_prcntge = (amt_discounted/float(MRP))*100
 amt_discounted_prcntge = str(amt_discounted_prcntge)+"%" #discounted_price
-print(amt_discounted_prcntge)
 
 dateval=str(datetime.date.today()) 
 date=dateval.split('-')
