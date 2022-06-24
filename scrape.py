@@ -8,7 +8,9 @@ from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.core.utils import ChromeType
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
 import datetime
+import time
 
 chrome_service = Service(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install())
 
@@ -29,9 +31,12 @@ driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
 
 #driver = webdriver.Edge(service=Service(EdgeChromiumDriverManager().install()))
 driver.get("https://www.bigbasket.com/pd/40048457/fresho-potato-new-crop-1-kg/")
-value = driver.find_element_by_class_name('IyLvo')
+time.sleep(3)
+value=driver.find_elements(By.CLASS_NAME, 'IyLvo')
+#value = driver.find_element_by_class_name('IyLvo')
 value=value.text
-value1 = driver.find_element_by_class_name('_2ifWF')
+value1=driver.find_elements(By.CLASS_NAME, '_2ifWF')
+#value1 = driver.find_element_by_class_name('_2ifWF')
 value1=value1.text
 
 MRP=value1.split(' ')
