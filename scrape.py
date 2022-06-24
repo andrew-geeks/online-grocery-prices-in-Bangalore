@@ -2,12 +2,32 @@ import csv
 from sqlite3 import Date
 
 from selenium import webdriver
-from selenium.webdriver.edge.service import Service
-from webdriver_manager.microsoft import EdgeChromiumDriverManager
+# from selenium.webdriver.edge.service import Service
+# from webdriver_manager.microsoft import EdgeChromiumDriverManager
+from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.core.utils import ChromeType
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
 import datetime
 
+chrome_service = Service(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install())
 
-driver = webdriver.Edge(service=Service(EdgeChromiumDriverManager().install()))
+chrome_options = Options()
+options = [
+    "--headless",
+    "--disable-gpu",
+    "--window-size=1920,1200",
+    "--ignore-certificate-errors",
+    "--disable-extensions",
+    "--no-sandbox",
+    "--disable-dev-shm-usage"
+]
+for option in options:
+    chrome_options.add_argument(option)
+
+driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
+
+#driver = webdriver.Edge(service=Service(EdgeChromiumDriverManager().install()))
 driver.get("https://www.bigbasket.com/pd/40048457/fresho-potato-new-crop-1-kg/")
 value = driver.find_element_by_class_name('IyLvo')
 value=value.text
