@@ -3,7 +3,7 @@ name: Price Scraping
 on:
   workflow_dispatch:
   schedule:
-    - cron: '30 3 * * *'
+    - cron: '30 6 * * *' #12:00HRS IST -everyday
     
 jobs:
   scrape:

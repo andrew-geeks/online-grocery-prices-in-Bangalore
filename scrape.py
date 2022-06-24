@@ -29,12 +29,11 @@ for option in options:
 driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
 
 #driver = webdriver.Edge(service=Service(EdgeChromiumDriverManager().install()))
+
 driver.get("https://www.bigbasket.com/pd/40048457/fresho-potato-new-crop-1-kg/")
 value=driver.find_element(By.CLASS_NAME, 'IyLvo')
-#value = driver.find_element_by_class_name('IyLvo')
 value=value.text
 value1=driver.find_element(By.CLASS_NAME, '_2ifWF')
-#value1 = driver.find_element_by_class_name('_2ifWF')
 value1=value1.text
 
 MRP=value1.split(' ')
@@ -42,6 +41,7 @@ MRP=MRP[1] #mrp
 
 actualPrice=value.split(' ')
 actualPrice=actualPrice[1] #price
+
 driver.close()
 
 amt_discounted= float(MRP) - int(actualPrice)
