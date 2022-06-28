@@ -1,6 +1,5 @@
 import csv
 from sqlite3 import Date
-
 from selenium import webdriver
 # from selenium.webdriver.edge.service import Service
 # from webdriver_manager.microsoft import EdgeChromiumDriverManager
@@ -35,7 +34,8 @@ value=driver.find_element(By.CLASS_NAME, 'IyLvo')
 value=value.text
 value1=driver.find_element(By.CLASS_NAME, '_2ifWF')
 value1=value1.text
-
+value2=driver.find_element(By.XPATH,'//*[@id="40048457"]/tr[3]/td[2]')
+amt_discounted_prcntge=value2.text
 MRP=value1.split(' ')
 MRP=MRP[1] #mrp
 
@@ -43,10 +43,6 @@ actualPrice=value.split(' ')
 actualPrice=actualPrice[1] #price
 
 driver.close()
-
-amt_discounted= float(MRP) - int(actualPrice)
-amt_discounted_prcntge = (amt_discounted/float(MRP))*100
-amt_discounted_prcntge = str(amt_discounted_prcntge)+"%" #discounted_price
 
 dateval=str(datetime.date.today()) 
 date=dateval.split('-')
