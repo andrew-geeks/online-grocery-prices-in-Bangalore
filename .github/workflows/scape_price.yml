@@ -22,7 +22,7 @@ jobs:
         run: sudo apt purge google-chrome-stable
         
       - name: Installing packages
-        run: pip install requests webdriver-manager selenium
+        run: pip install requests chromedriver-autoinstaller selenium
         
       - name: Running scraping script
         run: python scrape.py
