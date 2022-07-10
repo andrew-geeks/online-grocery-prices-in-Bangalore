@@ -5,7 +5,7 @@ from selenium import webdriver
 # from webdriver_manager.microsoft import EdgeChromiumDriverManager
 #from webdriver_manager.chrome import ChromeDriverManager
 import chromedriver_autoinstaller
-from webdriver_manager.core.utils import ChromeType
+#from webdriver_manager.core.utils import ChromeType
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
