@@ -3,15 +3,17 @@ from sqlite3 import Date
 from selenium import webdriver
 # from selenium.webdriver.edge.service import Service
 # from webdriver_manager.microsoft import EdgeChromiumDriverManager
-from webdriver_manager.chrome import ChromeDriverManager
+#from webdriver_manager.chrome import ChromeDriverManager
+import chromedriver_autoinstaller
 from webdriver_manager.core.utils import ChromeType
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 import datetime
 
-chrome_service = Service(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install())
+#chrome_service = Service(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install())
 
+chromedriver_autoinstaller.install()
 chrome_options = Options()
 options = [
     "--headless",
@@ -25,7 +27,7 @@ options = [
 for option in options:
     chrome_options.add_argument(option)
 
-driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
+driver = webdriver.Chrome(options=chrome_options)
 
 #driver = webdriver.Edge(service=Service(EdgeChromiumDriverManager().install()))
 
