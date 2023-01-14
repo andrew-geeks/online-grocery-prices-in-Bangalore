@@ -36,7 +36,7 @@ value=driver.find_element(By.CLASS_NAME, 'IyLvo')
 value=value.text
 value1=driver.find_element(By.CLASS_NAME, '_2ifWF')
 value1=value1.text
-value2=driver.find_element(By.XPATH,'//*[@id="40048457"]/tr[3]/td[2]')
+value2=driver.find_element(By.XPATH,'//*[@id="10000159"]/tr[3]/td[2]')
 amt_discounted_prcntge=value2.text
 MRP=value1.split(' ')
 MRP=MRP[1] #mrp
