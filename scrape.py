@@ -31,7 +31,7 @@ driver = webdriver.Chrome(options=chrome_options)
 
 
 
-driver.get("https://www.bigbasket.com/pd/40048457/fresho-potato-new-crop-1-kg/")
+driver.get("https://www.bigbasket.com/pd/10000159/fresho-potato-1-kg/")
 value=driver.find_element(By.CLASS_NAME, 'IyLvo')
 value=value.text
 value1=driver.find_element(By.CLASS_NAME, '_2ifWF')
