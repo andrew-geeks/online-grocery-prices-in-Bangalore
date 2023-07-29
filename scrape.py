@@ -11,7 +11,7 @@ import json
 chromedriver_autoinstaller.install()
 chrome_options = Options()
 options = [
-    "--headless",
+    #"--headless",
     "--disable-gpu",
     "--window-size=1920,1200",
     "--ignore-certificate-errors",
@@ -34,7 +34,9 @@ def getData(fname,url):
     value=value.text
     value1=driver.find_element(By.CLASS_NAME, '_2ifWF')
     value1=value1.text
-    value2=driver.find_element(By.XPATH,'//*[@id="10000159"]/tr[3]/td[2]')
+    value2 = driver.find_element(By.CLASS_NAME,'_21awm')
+    value2 = value2.find_element(By.CLASS_NAME,'IyLvo')
+    #value2=driver.find_element(By.XPATH,'//*[@id="10000159"]/tr[3]/td[2]')
     amt_discounted_prcntge=value2.text
     MRP=value1.split(' ')
     MRP=MRP[1] #mrp
