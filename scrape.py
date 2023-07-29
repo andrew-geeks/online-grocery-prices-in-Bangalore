@@ -11,7 +11,7 @@ import json
 chromedriver_autoinstaller.install()
 chrome_options = Options()
 options = [
-    #"--headless",
+    "--headless",
     "--disable-gpu",
     "--window-size=1920,1200",
     "--ignore-certificate-errors",
