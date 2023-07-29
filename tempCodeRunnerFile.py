@@ -1,2 +1,0 @@
-
-    date=dateval.split('-')

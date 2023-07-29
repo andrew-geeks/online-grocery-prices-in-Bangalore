@@ -60,10 +60,8 @@ for i in j_data["data"]:
     keys = i.keys()
     values = i.values()
     for j in keys:
-        try:
-             getData(j,i[j])
-        except:
-            pass 
+        getData(j,i[j])
+       
 driver.close()      
     
 
