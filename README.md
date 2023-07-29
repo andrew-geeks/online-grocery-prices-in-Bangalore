@@ -1,4 +1,4 @@
-# Historical Online grocery price dataset ~ Bengaluru(Bnagalore), India
+# Historical Online grocery price dataset ~ Bengaluru(Bangalore), India
 Dataset of grocery(vegetables) which includes its daily price📈,MRP,etc in an online site(Bangalore). These data can be helpful in data anaytics and for creating different machine learning models. 
 >Prices🏷️ are taken at daily basis. All datasets are stored in .csv format.
 
