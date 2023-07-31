@@ -1,5 +1,4 @@
 import csv
-from sqlite3 import Date
 from selenium import webdriver
 import chromedriver_autoinstaller
 from selenium.webdriver.chrome.options import Options
