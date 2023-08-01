@@ -7,7 +7,7 @@ from selenium.webdriver.common.by import By
 import datetime
 import json
 
-chromedriver_autoinstaller.install()
+#chromedriver_autoinstaller.install()
 chrome_options = Options()
 options = [
     "--headless",
@@ -21,7 +21,7 @@ options = [
 for option in options:
     chrome_options.add_argument(option)
 
-driver = webdriver.Chrome(options=chrome_options)
+driver = webdriver.Chrome(options=chrome_options,executable_path='chromedriver.exe')
 f = open('list.json')
 j_data = json.load(f)
 
