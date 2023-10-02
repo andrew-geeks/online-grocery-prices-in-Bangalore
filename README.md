@@ -17,5 +17,8 @@ We use Selenium library to scrape data from an online site(bigbasket) and store 
 * datetime
 * csv
 
+## Updates🆕
+- ⚠️03-10-2023: Due to upgradation in source site, data of **September month is not available!** All issues are fixed and data scraping begins from 03-10-2023.
+
 
 >If you like these datasets, feel free to star🌟/fork🍴 this [repository](https://github.com/andrew-geeks/online-grocery-prices-in-Bangalore). Thank You🙏!
